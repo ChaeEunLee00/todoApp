@@ -20,6 +20,11 @@ public class TodoController {  //Todo: 대체 왜 todoBackend에서는 patch랑 
         this.todoMapper = todoMapper;
     }
 
+    @GetMapping("/main")
+    public String main(){
+        return "Hello Spring World!";
+    }
+
     @PostMapping
     public ResponseEntity postTodo(@Valid @RequestBody TodoDto.Post todoPostDto){
         // dto -> entity 매핑 후 서비스에서 create 요청한 것 가져오기
